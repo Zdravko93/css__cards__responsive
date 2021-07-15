@@ -1,0 +1,166 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* MOBILE FIRST DESIGN */
+body {
+  margin: auto;
+  min-height: 100vh;
+  background: #f2f2f2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main__container {
+  margin: auto;
+  min-height: 80vh;
+  width: 80em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  /* ??? */
+}
+
+.car__card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 2.5em;
+  position: relative;
+  -webkit-transition: -webkit-transform 400ms ease;
+  transition: -webkit-transform 400ms ease;
+  transition: transform 400ms ease;
+  transition: transform 400ms ease, -webkit-transform 400ms ease;
+}
+
+.car__card:hover {
+  -webkit-transform: translateY(-2em);
+          transform: translateY(-2em);
+}
+
+.car__card::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: #1461c5;
+  opacity: 0;
+  -webkit-transition: opacity 400ms ease;
+  transition: opacity 400ms ease;
+  -webkit-transform-origin: left;
+          transform-origin: left;
+}
+
+.car__card:hover::after {
+  opacity: 1;
+}
+
+.car__title {
+  margin: 1em 0em;
+  font-family: 'Big Shoulders Display', cursive;
+  text-transform: uppercase;
+  color: #f2f2f2;
+}
+
+.car__sedans {
+  background-color: #e38826;
+}
+
+.car__suvs {
+  background: #006970;
+}
+
+.car__luxury {
+  background: #004241;
+}
+
+.car__paragraph,
+.btn {
+  font-family: 'Lexend Deca', sans-serif;
+}
+
+.car__paragraph {
+  padding-bottom: 1em;
+  font-size: 0.9375em;
+  color: rgba(255, 255, 255, 0.75);
+  width: 80%;
+  /* !!! */
+  text-align: left;
+}
+
+.btn {
+  border: none;
+  outline: none;
+  text-decoration: none;
+  background: #f2f2f2;
+  padding: 0.8em 1.8em;
+  border-radius: 5em;
+  -webkit-transition: all 400ms ease;
+  transition: all 400ms ease;
+}
+
+.btn:hover {
+  background: transparent;
+  color: #f2f2f2;
+  border: 2px solid #f2f2f2;
+}
+
+.btn__sedans {
+  color: #e38826;
+}
+
+.btn__suvs {
+  color: #006970;
+}
+
+.btn__luxury {
+  color: #004241;
+}
+
+/* RESPONSIVE    MOBILE ==> DESKTOP */
+@media (min-width: 55em) {
+  .main__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    min-height: 40em;
+  }
+  .btn {
+    margin-top: 7em;
+  }
+}
+/*# sourceMappingURL=styles.css.map */
